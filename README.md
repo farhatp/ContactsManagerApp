@@ -15,3 +15,5 @@ Controller i.e. ContactsController is used for managing the views created for ma
 Views created for managing contacts are Index, Create, Edit, Delete
 Also, shared views are used for the common layout and error for all the views.
 
+You can download the code and run it locally for it to work.
+
