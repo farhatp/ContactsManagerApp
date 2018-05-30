@@ -18,7 +18,7 @@ CREATE TABLE [dbo].[Contacts] (
     [LastName]    NVARCHAR (50)  NULL,
     [Email]       NVARCHAR (MAX) NULL,
     [PhoneNumber] NVARCHAR (12)  NULL,
-    [Status]      TINYINT        NULL
+    [Status]      INT        NULL
 );
 
 
