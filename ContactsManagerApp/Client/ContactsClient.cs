@@ -10,7 +10,7 @@ namespace ContactsManagerApp.Client
 {
     public class ContactsClient
     {
-        private string Base_URL = "http://localhost:1562/api/";
+        private readonly string Base_URL = HttpContext.Current.Request.Url.Scheme + "://"+HttpContext.Current.Request.Url.Authority + "/api/";             //"http://localhost:1562/api/";        
 
         public IEnumerable<Contact> FindAll()
         {

@@ -178,6 +178,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\ContactsManagerAppContext-20180528160351.mdf" />
+    <Content Include="App_Data\ContactsManagerAppContext-20180528160351_log.ldf">
+      <DependentUpon>ContactsManagerAppContext-20180528160351.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -218,9 +222,7 @@
     <Content Include="Views\Contacts\Delete.cshtml" />
     <Content Include="Views\Contacts\Index.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
