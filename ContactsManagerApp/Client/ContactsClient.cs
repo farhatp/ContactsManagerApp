@@ -10,7 +10,8 @@ namespace ContactsManagerApp.Client
 {
     public class ContactsClient
     {
-        private readonly string Base_URL = HttpContext.Current.Request.Url.Scheme + "://"+HttpContext.Current.Request.Url.Authority + "/api/";             //"http://localhost:1562/api/";        
+        //private readonly string Base_URL = HttpContext.Current.Request.Url.Scheme + "://"+HttpContext.Current.Request.Url.Authority + "/api/";             //"http://localhost:1562/api/";    
+        private readonly string Base_URL = System.Configuration.ConfigurationManager.AppSettings.Get("RESTApiUrl");
 
         public IEnumerable<Contact> FindAll()
         {
@@ -30,6 +31,7 @@ namespace ContactsManagerApp.Client
                 return null;
             }
         }
+
         public Contact Find(int id)
         {
             try
@@ -48,6 +50,7 @@ namespace ContactsManagerApp.Client
                 return null;
             }
         }
+
         public bool Create(Contact contact)
         {
             try
@@ -63,6 +66,7 @@ namespace ContactsManagerApp.Client
                 return false;
             }
         }
+
         public bool Edit(Contact contact)
         {
             try
@@ -78,12 +82,13 @@ namespace ContactsManagerApp.Client
                 return false;
             }
         }
+
         public bool Delete(int id)
         {
             try
             {
                 HttpClient client = new HttpClient();
-                client.BaseAddress = new Uri(Base_URL);
+                client.BaseAddress = new Uri(Base_URL);               
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
                 HttpResponseMessage response = client.DeleteAsync("contactsapi/" + id).Result;
                 return response.IsSuccessStatusCode;

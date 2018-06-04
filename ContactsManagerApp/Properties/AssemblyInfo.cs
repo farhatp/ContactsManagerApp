@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("ContactsManagerApp")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("MKCL")]
+[assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("ContactsManagerApp")]
-[assembly: AssemblyCopyright("Copyright © MKCL 2018")]
+[assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
