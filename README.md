@@ -10,7 +10,7 @@ This is an application which manages the contacts and has the following features
 It uses a Web Api Controller i.e. ContactsApiController for iteracting with the to DB server. its a REST API with will be consumed by the Web Client
 The client used for making REST calls to the ContactsApi and getting JSON response is ContactsClient. 
 The JSON Response is serialized as Model Object(s) of Model i.e. Contacts
-Also, the Model used for DBContext used is ContactsManagerAppContext
+Also, the Model used for DBContext is ContactsManagerAppContext
 Controller i.e. ContactsController is used for managing the views created for managing Contacts
 Views created for managing contacts are Index, Create, Edit, Delete
 Also, shared views are used for the common layout and error for all the views.
