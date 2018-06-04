@@ -17,3 +17,13 @@ Also, shared views are used for the common layout and error for all the views.
 
 You can download the code and run it locally for it to work.
 
+Also, when using IIS Express add both of these bindings to your site as:
+
+                  <bindings>
+                        <binding protocol="http" bindingInformation="*:1562:localhost" />
+                        <binding protocol="http" bindingInformation="*:1562:127.0.0.1" />
+                        
+                </bindings>
+                
+As, the unit test project created for this application, the REST calls from the unit tests to the REST api will not be resolving hostname to local ip unless the binding is done even for the local ip i.e. 127.0.0.1 alongwith the host name i.e. localhost in applicationhost.config file when run locally unless hosted online.
+
