@@ -27,3 +27,6 @@ Also, when using IIS Express add both of these bindings to your site as:
                 
 As, the unit test project created for this application, the REST calls from the unit tests to the REST api will not be resolving hostname to local ip unless the binding is done even for the local ip i.e. 127.0.0.1 alongwith the host name i.e. localhost in applicationhost.config file when run locally unless hosted online.
 
+Drop and create the Contacts table or Truncate it before running all the test cases.
+LocalDB is used for the Database. 
+
